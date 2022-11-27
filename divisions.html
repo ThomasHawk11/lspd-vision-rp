@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Los Santos Police Department</title>
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/LineIcons.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+  <style>
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .logo {
+      width: 125px;
+      height: 125px;
+    }
+
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+      margin-bottom: 30px;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--====== HEADER PART START ======-->
+
+  <header class="header-area">
+    <div class="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="w-full">
+            <nav class="flex items-center justify-between navbar navbar-expand-md">
+              <a class="mr-4 navbar-brand" href="index.html">
+                <img src="assets/images/lspd.svg" class="logo" alt="Logo LSPD">
+              </a>
+              <ul class="items-center content-start mr-auto lg:justify-center md:justify-end navbar-nav md:flex">
+                <li class="nav-item">
+                  <a class="page-scroll" href="index.html" style="color: white;">ACCUEIL</a>
+                </li>
+                <li class="nav-item">
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <a class="page-scroll" style="color: white;">INFOS</a>
+                    <div class="dropdown-content">
+                      <a href="histoire.html">HISTOIRE</a>
+                      <hr>
+                      <a href="grades.html">GRADES & FONCTIONS</a>
+                      <hr>
+                      <a href="uof.html">UTILISATION DE LA FORCE</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <a class="page-scroll" style="color: white;">DIVISIONS</a>
+                    <div class="dropdown-content">
+                      <a href="patchs.html">LES PATCHS</a>
+                      <hr>
+                      <a href="divisions.html">LES DIVISIONS</a>
+                    </div>
+                </li>
+              </ul>
+          </div>
+          </nav> <!-- navbar -->
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+    </div> <!-- navgition -->
+
+    <div id="home" class="relative z-5 header-hero" style="background-image: url(assets/images/vespucci.jpg)">
+      <div class="container">
+        <div class="justify-center row">
+          <div class="w-full lg:w-5/6 xl:w-2/3">
+            <div class="pt-48 pb-64 text-center header-content">
+              <h3 class="mb-5 text-3xl font-semibold leading-tight text-white md:text-5xl">DIVISIONS</h3>
+            </div> <!-- header content -->
+          </div>
+        </div> <!-- row -->
+      </div> <!-- container -->
+      <div class="absolute bottom-0 z-20 w-full h-auto -mb-1 header-shape">
+        <img src="assets/images/header-shape.svg" alt="shape">
+      </div>
+    </div> <!-- header content -->
+  </header>
+
+  <!--====== HEADER PART ENDS ======-->
+  <div class="tab">
+    <button class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600"
+      onclick="openDivision(event, 'Police Academy')">Police Academy</button>
+    <button class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600"
+      onclick="openDivision(event, 'Metropolitan Division')">Metropolitan Division</button>
+    <button class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600"
+      onclick="openDivision(event, 'Traffic Division')">Traffic Division</button>
+    <button class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600"
+      onclick="openDivision(event, 'Detective Bureau')">Detective Bureau</button>
+    <button class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600"
+      onclick="openDivision(event, 'Air Support Division')">Air Support Division</button>
+    <button class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600"
+      onclick="openDivision(event, 'Media Relation Division')">Media Relation Division</button>
+    <button class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600"
+      onclick="openDivision(event, 'Crisis Negociation Team')">Crisis Negociation</button>
+  </div>
+
+  <div id="Police Academy" class="tabcontent">
+    <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">Police Academy</h3>
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      La Police Academy est la division de recrutement ainsi que de formation du Los Santos Police Department. Cette
+      division est la base, c'est la que tout commence pour votre carrière d'officier au département.
+    </p>
+
+    <div class="flex flex-wrap justify-center">
+      <img src="assets/images/aca1.png" class="p-1 bg-white border rounded max-w-sm"
+        style="height: 500px; width: 500px; margin: 15px;" alt="Entrainement physique" />
+    </div>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; margin: 30px">
+      Les missions principales de la Police Academy sont :
+    <ul class="bg-white rounded-lg w-96 text-gray-900">
+      <li class="px-6 py-2 border-b border-gray-200 w-full rounded-t-lg">Le recrutement des nouvelles générations
+        d'officier.</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">L'accompagnement des cadets durant leur formation a la
+        Police Academy puis durant toute leur période de rookie au sein du département.</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">La formation de tout les officier sur les utilisation
+        d'armes a feu ou bien de procédure diverses.</li>
+    </ul>
+    </p>
+
+    <div class="flex flex-wrap justify-center">
+      <img src="assets/images/aca2.png" class="p-1 bg-white border rounded max-w-sm"
+        style="height: 500px; width: 500px; margin: 15px;" alt="Entrainement au tir" />
+    </div>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; margin: 30px">
+      La division est composé de 2 pôles:
+    <ul class="bg-white rounded-lg w-96 text-gray-900">
+      <li class="px-6 py-2 border-b border-gray-200 w-full rounded-t-lg">Le pôle Recrutement</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Le pôle formation</li>
+    </ul>
+    </p>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; margin: 30px">
+      La division est également structuré de Grade internes allant de Recruteur a Commanding Officer.
+    </p>
+  </div>
+
+
+
+  <div id="Metropolitan Division" class="tabcontent">
+    <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">Metropolitan Division</h3>
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      La Metropolitan Division est composée de plusieurs pelotons comme le A Platoon et le K-9 Platoon.
+      La Metropolitan Division est née d'une unité compacte et mobile se nommant Reserve Unit crée en 1933, cette unité
+      a pour but de soutenir et épauler les autres unités sur le terrain, répondre aux demandes d'assistances des
+      collègues et des citoyens, sécuriser les zones scabreuses, prendre en charge des situations à hauts-risques,
+      dénouer les situations tendues et contrôler les foules.
+      Les officiers de la Metropolitan division sont différenciés principalement grâce a leur tenue Utility bleue foncé
+      ainsi que les patchs Metro au niveau des épaules.
+    </p>
+
+    <div class="flex flex-wrap justify-center">
+      <img src="assets/images/md.png" class="p-1 bg-white border rounded max-w-sm"
+        style="margin: 15px; width: 50%; height: auto;" alt="Equipement de la Metropolitan Division" />
+    </div>
+  </div>
+
+
+
+  <div id="Traffic Division" class="tabcontent">
+    <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">Traffic Division</h3>
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      La Traffic Division (T.D.) est l'unité qui gère tout ce qui est en lien avec la circulation dans le Los Santos
+      Police Department.
+      Cela inclut entre autres : le contrôle de la circulation, la prévention pour maximiser la sécurité sur nos routes
+      et autoroutes, l'escorte de convois en tout genre (destruction de saisie, de prisonniers etc..), les interventions
+      sur des courses poursuites à haute vitesse et la contravention des délits routiers.
+      Pour mener à bien ces missions, les membres de cette division sont tous formés quotidiennement afin d'être
+      efficaces sur tous les types d'intervention. La T.D. est également en étroite collaboration avec les diverses
+      unités du Département (ASD, UDU etc..) afin d’avoir une surveillance maximale des usages de la route.
+    </p>
+
+    <div class="flex flex-wrap justify-center">
+      <img src="assets/images/td.jpg" class="p-1 bg-white border rounded max-w-sm"
+        style="margin: 15px; width: 50%; height: auto;" alt="Equipement de la Metropolitan Division" />
+    </div>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      Les véhicules de la Traffic Division sont tous équipés de radar embarqué, de pare-buffle ainsi que d’un système de
+      reconnaissance de plaque automatique (ALPR). La Division a pour véhicules des Buffalo 2009 ainsi que différents
+      modèles de motos routières et tout-terrains (Thrust, Sovereign et BF400).
+      Les agents de la Traffic Division sont également les seuls à être formés en tant que Motor Officer, seuls
+      officiers autorisés à conduire les motos.
+      Il existe également un pôle “Off-Road Enforcement” pour les agents volontaires de la division. Ce pôle s’occupe
+      des courses poursuite en tout-terrain.
+    </p>
+
+  </div>
+
+
+
+  <div id="Detective Bureau" class="tabcontent">
+    <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">Detective Bureau</h3>
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      Le Detective Bureau est la division chargée principalement des activités relatives aux enquêtes et à
+      l'investigation. Sous divisé en 2 parties , La Detective Division et la Gang and Narcotics Division.
+    </p>
+
+    <div class="flex flex-wrap justify-center">
+      <img src="assets/images/db1.png" class="p-1 bg-white border rounded max-w-sm"
+        style="margin: 15px; width: 50%; height: auto;" alt="Agents du Detective Bureau" />
+    </div>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; margin: 30px">
+    <h4 class="font-medium leading-tight text-2xl mt-0 mb-2 text-blue-600">Enquêtes</h4>
+    Le Detective Bureau prend en charge plusieurs types d'enquêtes :
+    <ul class="bg-white rounded-lg w-96 text-gray-900">
+      <li class="px-6 py-2 border-b border-gray-200 w-full rounded-t-lg">Enquêtes relatives aux gangs</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Enquêtes relatives aux organisations criminelles</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Trafic d'armes</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Trafic de stupéfiants</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Terrorisme</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Trafic d'armes</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Meurtres | Assassinats</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Kidnappings</li>
+    </ul>
+    </p>
+
+    <div class="flex flex-wrap justify-center">
+      <img src="assets/images/db2.jpeg" class="p-1 bg-white border rounded max-w-sm"
+        style="margin: 15px; width: 50%; height: auto;" alt="Holster et insigne d'un agent du Detective Bureau" />
+    </div>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+    <h4 class="font-medium leading-tight text-2xl mt-0 mb-2 text-blue-600">Nos missions</h4>
+    <ul class="bg-white rounded-lg w-96 text-gray-900" style="text-align:justify;">
+      <li class="px-6 py-2 border-b border-gray-200 w-full rounded-t-lg"><b>Missions spécifiques aux gangs :</b>
+        Démantèlement des gangs de rue violents et les moyens par lesquels ils soutiennent leur mode de vie, y compris
+        la fabrication, le transport, la vente et l'utilisation de drogues illicites. Les détectives se concentrent
+        également sur des stratégies d'application de la loi au niveau de la rue en se rapprochant le plus possible des
+        citoyens, et ceci afin d'obtenir une baisse de criminalité de manière pacifique, ce qui permet de résoudre les
+        problèmes de la communauté et de faciliter la participation des agents en uniforme à la lutte contre les
+        stupéfiants et les gangs.</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full"><b>Trafic de stupéfiant :</b> Les détectives peuvent être
+        déplacés sur des appels relatifs à de la possession/vente de stupéfiants (comme des ventes de drogue ou des
+        interrogatoires).</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full"><b>Trafic d'armes :</b> Avec toute la violence qui sévit
+        dans notre Etat, la Detective Division prend très au sérieux le sujet du trafic d'armes en intervenant sur tout
+        type d'appel relatif à une présence d'armes : Agressions, Fusillades, Interrogatoires suite à une possession
+        d'arme, Braquages à main armée.</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full"><b>Filatures :</b> Dans le cadre d’une enquête, il est
+        possible d’effectuer des filatures sur les véhicules suspects afin d’obtenir plus d'informations voire preuves.
+      </li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full"><b>Planques :</b> Surveillances effectuées dans le but
+        d’obtenir des informations liées à une ou plusieurs enquêtes, cette surveillance peut être effectuée sur un
+        local, comme sur une personne.</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full"><b>Interrogatoires :</b> Les interrogatoires sont très
+        recommandés, et sont une des méthodes les plus prolifiques pour obtenir des informations et renforcer les
+        enquêtes.</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full"><b>Dépositions:</b> Les dépositions d’otages ou de personnes
+        qui ont assisté à un délit/crime peuvent être une source très importante d’informations.</li>
+    </ul>
+    </p>
+  </div>
+
+
+
+  <div id="Air Support Division" class="tabcontent">
+    <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">Air Support Division</h3>
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      L'Air Support Division est l'unité aérienne du Los Santos Police Department. Cette division a un rôle de support
+      pour le Département.
+      Chaque appareil aérien est équipé d'une caméra possédant un zoom ainsi que d'une vision nocturne et est piloté par
+      un Flight Officer. Côté Co-Pilote, nous avons le Technical Flight Operator. C'est ce dernier qui transmet les
+      informations (photos, vidéos, numéro de plaque etc...), qui communique en radio et qui gère la caméra afin de
+      prendre les informations vue du ciel.
+    </p>
+
+    <div class="flex flex-wrap justify-center">
+      <img src="assets/images/asd2.png" class="p-1 bg-white border rounded max-w-sm"
+        style="margin: 15px; width: 50%; height: auto;" alt="Helicopter de l'ASD volant de nuit." />
+    </div>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; margin: 30px">
+      Les missions principales de l'Air Support Division sont :
+    <ul class="bg-white rounded-lg w-96 text-gray-900">
+      <li class="px-6 py-2 border-b border-gray-200 w-full rounded-t-lg"><b>Recherche et signalement :</b> Tout ce qui
+        constitue à la recherche d'informations ou d'individus</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full"><b>Support sur des courses poursuite ou sur des descentes
+          :</b> Appui aérien visant à aider les unités terrestres pour l'arrestation des suspects.</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full"><b>Débarquement d'unité dans des zones difficiles d'accès
+          :</b> Déplacement d'un groupe d'intervention dans des zones inaccessible.</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full"><b>Sauvetage et Extraction :</b> Assistance aux unités
+        médicales ou extraction de personne en difficultés dans des zones à risque (toits, montagnes, grues etc...).
+      </li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full"><b>Prise d'informations :</b> Le Technical Flight Operator
+        prend des photos et donne des informations aux unités terrestres pendant les interventions (prise d'otage,
+        braquage de banque etc...)</li>
+    </ul>
+    </p>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      La Division est structurée avec des grades allant de Pilot I à Pilot IV.
+    </p>
+  </div>
+
+
+
+  <div id="Media Relation Division" class="tabcontent">
+    <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">Media Relation Division</h3>
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      La Média Relation Division ou plus communément appelée la "MRD" favorise la coopération et le respect mutuel entre
+      le département et les médias.
+    </p>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      Les membres de la MRD sont des personnes dévouées et hautement qualifiées qui ont conscience de l'importance de
+      cette division qui doit être considéré comme une ressource précieuse pour tenir le public informé des actions de
+      la Police.
+      Leur rôle est donc de travailler en collaboration avec les médias de la ville dans la collecte d'informations sur
+      les événements d'actualité ayant un impact sur les habitants de Los Santos.
+    </p>
+
+    <div class="flex flex-wrap justify-center">
+      <img src="assets/images/mrd1.png" class="p-1 bg-white border rounded max-w-sm"
+        style="margin: 15px; width: 50%; height: auto;" alt="MRD : Octobre Rose" />
+    </div>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; margin: 30px">
+      Les missions principales de l'Air Support Division sont :
+    <ul class="bg-white rounded-lg w-96 text-gray-900">
+      <li class="px-6 py-2 border-b border-gray-200 w-full rounded-t-lg">Tenir informé les médias des événements en
+        ville</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Maintenir un contact positif avec la population dans la rue
+        ou simplement à travers les médias. </li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Organiser des événements en ville dans le but de promouvoir
+        l'image du Service.</li>
+    </ul>
+    </p>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      L'image sur Service en général dépend en très grande partie du travail de la MRD.
+    </p>
+
+    <div class="flex flex-wrap justify-center">
+      <img src="assets/images/mrd2.png" class="p-1 bg-white border rounded max-w-sm"
+        style="margin: 15px; width: 50%; height: auto;" alt="Membre de la MRD interrogé par les journalistes" />
+    </div>
+
+  </div>
+
+  <div id="Crisis Negociation Team" class="tabcontent">
+    <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">Crisis Negociation Team</h3>
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      La Crisis Negotiation Team se compose d'officiers sélectionnés qui sont spécialement formés pour atténuer les
+      situations de crise et préserver la vie des otages, du public, de la police et des suspects dans les situations de
+      crise.
+      Les pierres angulaires de l'unité sont l'empathie, la connaissance et la compassion. Les appels typiques peuvent
+      concerner une personne barricadée dans un bâtiment pour éviter d'être arrêtée, une personne menaçant de se faire
+      du mal ou d'en faire à autrui, des prises d'otages ou une grande variété d'autres événements de crise qui menacent
+      la sécurité de Los Santos.
+    </p>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      L'équipe suit des formations régulières afin de s'assurer que les stratégies de négociation les plus récentes et
+      les plus efficaces sont en place. La formation se compose de scénarios, de formations à la réalité avec d'autres
+      unités de notre département et d'exercices. Tous nos négociateurs sont formés en continu et subissent des tests
+      psychologiques réguliers.
+      Les officiers de la CNT s'efforcent d'établir un dialogue et un rapport permanent avec la ou les personnes
+      impliquées dans l'incident.
+      Ils recueillent également des informations sur les personnes impliquées, interrogent les témoins, établissent des
+      profils psychologiques, évaluent les menaces et analysent les renseignements.
+    </p>
+
+
+  </div>
+
+
+
+  <div class="bg-blue-900 footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="w-full">
+          <div class="py-6 text-center">
+            <p class="text-white">
+              © Los Santos Police Department
+            </p>
+          </div>
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </div> <!-- footer copyright -->
+  </footer>
+  <a class="back-to-top" href="#"><i class="lni-chevron-up"></i></a>
+</body>
+
+<script>
+  function openDivision(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+
+</html>

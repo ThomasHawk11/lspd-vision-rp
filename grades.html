@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Los Santos Police Department</title>
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/LineIcons.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+  <style>
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .logo {
+      width: 125px;
+      height: 125px;
+    }
+
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+      margin-bottom: 30px;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--====== HEADER PART START ======-->
+
+  <header class="header-area">
+    <div class="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="w-full">
+            <nav class="flex items-center justify-between navbar navbar-expand-md">
+              <a class="mr-4 navbar-brand" href="index.html">
+                <img src="assets/images/lspd.svg" class="logo" alt="Logo LSPD">
+              </a>
+              <ul class="items-center content-start mr-auto lg:justify-center md:justify-end navbar-nav md:flex">
+                <li class="nav-item">
+                  <a class="page-scroll" href="index.html" style="color: white;">ACCUEIL</a>
+                </li>
+                <li class="nav-item">
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <a class="page-scroll" style="color: white;">INFOS</a>
+                    <div class="dropdown-content">
+                      <a href="histoire.html">HISTOIRE</a>
+                      <hr>
+                      <a href="grades.html">GRADES & FONCTIONS</a>
+                      <hr>
+                      <a href="uof.html">UTILISATION DE LA FORCE</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <a class="page-scroll" style="color: white;">DIVISIONS</a>
+                    <div class="dropdown-content">
+                      <a href="patchs.html">LES PATCHS</a>
+                      <hr>
+                      <a href="divisions.html">LES DIVISIONS</a>
+                    </div>
+                </li>
+              </ul>
+          </div>
+          </nav> <!-- navbar -->
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+    </div> <!-- navgition -->
+
+    <div id="home" class="relative z-5 header-hero" style="background-image: url(assets/images/vespucci.jpg)">
+      <div class="container">
+        <div class="justify-center row">
+          <div class="w-full lg:w-5/6 xl:w-2/3">
+            <div class="pt-48 pb-64 text-center header-content">
+              <h3 class="mb-5 text-3xl font-semibold leading-tight text-white md:text-5xl">GRADES & FONCTIONS</h3>
+            </div> <!-- header content -->
+          </div>
+        </div> <!-- row -->
+      </div> <!-- container -->
+      <div class="absolute bottom-0 z-20 w-full h-auto -mb-1 header-shape">
+        <img src="assets/images/header-shape.svg" alt="shape">
+      </div>
+    </div> <!-- header content -->
+  </header>
+
+  <!--====== HEADER PART ENDS ======-->
+  <div class="tab">
+    <button class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600"
+      onclick="openDivision(event, 'Police Officer')">Police Officer</button>
+    <button class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600"
+      onclick="openDivision(event, 'Police Sergeant')">Police Sergeant</button>
+    <button class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600"
+      onclick="openDivision(event, 'Police Lieutenant')">Police Lieutenant</button>
+    <button class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600"
+      onclick="openDivision(event, 'Police Captain')">Police Captain</button>
+  </div>
+
+  <div id="Police Officer" class="tabcontent">
+    <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">Police Officer</h3>
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px;">
+      Les officiers constituent le plus grand nombre d'agents assermentés du département. Le grade d'officier de police
+      est divisé en quatre grades d'avancement : Officer I, II, III, III+1. L'Officer I est un officier en formation qui
+      passe automatiquement au grade d'Officer II lorsqu'il a terminé avec succès sa période de formation. Un officier
+      de police peut être affecté à une patrouille en voiture, une patrouille à vélo, une moto ou une unité spécialisée
+      telle que l'unité K-9 ou Traffic. Lorsqu'une recrue est diplômée de la Police Academy, elle est affectée à un
+      poste et placée sous la supervision d'un agent de grade supérieur, normalement un Officer II ou III. Un officier
+      de police en formation affecté à une patrouille remplit des fonctions de base telles que :
+    <ul class="bg-white rounded-lg w-96 text-gray-900" style="margin-bottom : 15px">
+      <li class="px-6 py-2 border-b border-gray-200 w-full rounded-t-lg">Intervenir sur les lieux d'un crime ou d'un
+        accident</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Interroger des suspects, des témoins</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Rédaction de rapports</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Répondre aux appels radio</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Surveillance de toute activité suspecte</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Visiter les entreprises ouvertes telles que les banques, les
+        marchés, les grands magasins, les stations-service et autres pour établir un rapport avec les propriétaires</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Arrestation des suspects , collecte des preuves et transport
+        vers le service de police compétent</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Répondre aux questions des citoyens et des visiteurs</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Mener de nombreuses autres activités pour soutenir la
+        philosophie de police de proximité</li>
+    </ul>
+    </p>
+  </div>
+
+  <div id="Police Sergeant" class="tabcontent">
+    <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">Police Sergeant</h3>
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      Le grade de Police Sergeant est attribué aux Police Officer III+1 suite à un test d'environ deux semaines sur le
+      terrain sur décision du Command Staff. Ce grade est divisé en deux grades d'avancement : Police Sergeant I, et II.
+      Le Sergeant II accomplit des tâches plus complexes et de plus haut niveau.
+      Les Sergents sont amenés à superviser des secteurs de patrouille bien précis. Ils répondent à différents appels,
+      comme des scènes de crimes ou des appels spécifiques de la part des officiers.
+    </p>
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      Un sergent peut être Watch Commander pendant son service. En cette qualité, le sergent supervise l'intégralité de
+      son district, les patrouilles et les officiers ; examine et approuve tous les rapports d'arrestation et chaque
+      suspect placé en détention lui est présenté ; répond aux scènes de crime à la demande des officiers ; tient les
+      superviseurs informés des questions qui les concernent et remplit d'autres fonctions connexes.
+    </p>
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      Le travail de supervision est complexe et nécessite beaucoup de compétences, il consiste au plus souvent à :
+    <ul class="bg-white rounded-lg w-96 text-gray-900">
+      <li class="px-6 py-2 border-b border-gray-200 w-full rounded-t-lg">Superviser des officiers</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Superviser des opérations à haut risque dans différentes
+        zones.</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Éplucher la plupart des rapports d'interventions écrits par
+        les officiers.</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Répondre à des appels de renfort sur le terrain ou un
+        superviseur est demandé.</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Accueillir et répondre aux questions des citoyens, les
+        guider.</li>
+      <li class="px-6 py-2 border-b border-gray-200 w-full">Accompagner et diriger les officiers en probation.</li>
+    </ul>
+    </p>
+  </div>
+
+  <div id="Police Lieutenant" class="tabcontent">
+    <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">Police Lieutenant</h3>
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      Le grade de lieutenant est attribué à un officier chargé de diverses fonctions administratives et de maintien de
+      l'ordre au sein du service et est réparti en deux grades : Lieutenant I et II. Les lieutenants I sont généralement
+      affectés en tant que Watch Commander ou lieutenants "administratifs". Le lieutenant affecté à une patrouille est
+      chargé de superviser les sergents, les officiers et les détectives. À ce titre, le lieutenant est l'assistant du
+      capitaine. Plus précisément, le lieutenant assure un déploiement approprié et suffisant des officiers en fonction
+      des tendances de la criminalité dans un secteur ; il répond aux scènes de crimes graves tels que les fusillades
+      impliquant des officiers, des homicides, des vols et des cambriolages importants et il tient le capitaine informé
+      des questions préoccupantes.
+    </p>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      Le lieutenant veille à la formation appropriée et adéquate des officiers, à l'inspection du personnel, de
+      l'équipement et des installations afin de garantir la conformité avec les politiques et les procédures du LSPD,
+      mène des entretiens avec le personnel assermenté et civil, assiste aux réunions communautaires afin de promouvoir
+      les objectifs et les missions du département et les programmes de sécurité communautaire, intervient à l'Académie
+      de police et remplit d'autres fonctions connexes.
+    </p>
+
+  </div>
+
+  <div id="Police Captain" class="tabcontent">
+    <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">Police Captain</h3>
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      Le grade de capitaine est divisé en trois niveaux d'avancement : Captain I, II et III. Chaque niveau supérieur
+      assume des responsabilité plus complexes et plus difficiles dans le cadre de son affectation. En tant que plus
+      haut gradé dans un poste de police, le capitaine est responsable des tâches suivantes : Superviser les fonctions
+      des officiers et des détectives pour s'assurer qu'ils respectent les politiques, les procédures, les règlements et
+      les normes du LSPD ; maintenir la liaison avec la hiérarchie, le Chief of Police, le maire de Los Santos.
+    </p>
+
+    <p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800" style="text-align:justify; padding: 30px">
+      En plus des tâches ci-dessus, les capitaines affectés à des divisions spécialisées telles que la Gangs and
+      Narcotics Division, l'Investigation Division ou la Traffic Division sont responsables des tâches de supervision et
+      d'accompagnement.
+
+      En outre, un capitaine effectue des tâches administratives telles que l'examen des rapports importants ;
+      l'embauche d'officiers dans son poste ; des interventions à la Police Academy, etc.
+    </p>
+  </div>
+  <hr>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <div class="flex flex-wrap justify-center">
+            <img src="assets/images/grades1.PNG" class="p-1 bg-white border rounded max-w-sm"
+              style="margin: 15px; width: 70%; height: auto;" alt="Grades 1" />
+          </div>
+        </td>
+        <td>
+          <div class="flex flex-wrap justify-center">
+            <img src="assets/images/grades2.PNG" class="p-1 bg-white border rounded max-w-sm"
+              style="margin: 15px; width: 70%; height: auto;" alt="Grades 2" />
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <div class="bg-blue-900 footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="w-full">
+          <div class="py-6 text-center">
+            <p class="text-white">
+              © Los Santos Police Department
+            </p>
+          </div>
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </div> <!-- footer copyright -->
+  </footer>
+  <a class="back-to-top" href="#"><i class="lni-chevron-up"></i></a>
+</body>
+
+<script>
+  function openDivision(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+
+</html>
